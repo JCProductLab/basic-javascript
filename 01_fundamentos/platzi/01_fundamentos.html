@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Javascript</title>
+</head>
+<body>
+    <section>
+        <header>
+            <h1>Fundamentos Javascript</h1>
+        </header>
+    </section>
+    <section>
+        <h2>Javascript</h2>
+        <p>JavaScript es un lenguaje de programación que se utiliza principalmente para crear contenido interactivo en las páginas web. Fue desarrollado por Brendan Eich en 1995 y desde entonces se ha convertido en uno de los lenguajes de programación más populares del mundo.</p>
+        <p>JavaScript es un lenguaje de programación del lado del cliente, lo que significa que se ejecuta en el navegador web del usuario. Esto permite a los desarrolladores crear aplicaciones web dinámicas y ricas en funcionalidades, como formularios interactivos, animaciones, juegos y aplicaciones web completas.</p>
+        <p>JavaScript es un lenguaje de programación interpretado, lo que significa que no necesita ser compilado antes de ser ejecutado. En su lugar, el código JavaScript se interpreta en tiempo real por el navegador web del usuario.</p>
+        <p>JavaScript es un lenguaje de programación orientado a objetos, lo que significa que se basa en la creación de objetos y la manipulación de sus propiedades y métodos. Esto permite a los desarrolladores crear aplicaciones web complejas y escalables.</p>
+        <p>JavaScript es un lenguaje de programación muy versátil, que se puede utilizar para crear una amplia variedad de aplicaciones web, desde sitios web simples hasta aplicaciones web complejas y ricas en funcionalidades. Además, JavaScript se puede utilizar junto con otros lenguajes de programación, como HTML y CSS, para crear aplicaciones web completas y funcionales.</p>
+    </section>
+    <section>
+        <h2>Variables</h2>
+        <p>En JavaScript, una variable es un contenedor que se utiliza para almacenar datos o valores. Las variables se pueden utilizar para almacenar diferentes tipos de datos, como números, cadenas de texto, booleanos, objetos y arreglos.</p>
+        <p>Para declarar una variable en JavaScript, se utiliza la palabra clave <code>var</code>, <code>let</code> o <code>const</code>, seguida del nombre de la variable. Por ejemplo:</p>
+        <pre><code>let nombre = "Juan";
+const edad = 30;
+var esEstudiante = true;</code></pre>
+        <p>En este ejemplo, se declaran tres variables: <code>nombre</code>, <code>edad</code> y <code>esEstudiante</code>, que almacenan una cadena de texto, un número y un valor booleano, respectivamente.</p>
+        <p>Es importante tener en cuenta que las variables declaradas con <code>let</code> y <code>const</code> tienen un alcance de bloque, lo que significa que solo son accesibles dentro del bloque de código en el que se declaran. Por otro lado, las variables declaradas con <code>var</code> tienen un alcance de función, lo que significa que son accesibles en toda la función en la que se declaran.</p>
+        <h3>Datos para variables</h3>
+        <h4>Primitivos</h4>
+        <ul>
+            <li>Número: Representa valores numéricos, tanto enteros como decimales. Ejemplo: <code>let edad = 25;</code></li>
+            <li>Cadena de texto (String): Representa secuencias de caracteres. Ejemplo: <code>let nombre = "Ana";</code></li>
+            <li>Booleano: Representa valores de verdad, es decir, <code>true</code> o <code>false</code>. Ejemplo: <code>let esEstudiante = true;</code></li>
+            <li>Indefinido (Undefined): Representa una variable que ha sido declarada pero no asignada a ningún valor. Ejemplo: <code>let x;</code></li>
+            <li>Nulo (Null): Representa la ausencia intencional de cualquier valor. Ejemplo: <code>let y = null;</code></li>
+            <li>Símbolo (Symbol): Representa un valor único e inmutable, utilizado principalmente como identificadores de propiedades de objetos. Ejemplo: <code>let sym = Symbol("id");</code></li>
+            <li>BigInt: Representa números enteros muy grandes que exceden el límite de los números normales en JavaScript. Ejemplo: <code>let bigNumber = 123456789012345678901234567890n;</code></li>
+        </ul>
+        <h4>Compuestos</h4>
+        <ul>
+            <li>Objeto (Object): Representa una colección de propiedades y métodos. Ejemplo: <code>let persona = { nombre: "Luis", edad: 28, profesión: "Ingeniero" };</code></li>
+            <li>Arreglo (Array): Representa una lista ordenada de valores. Ejemplo: <code>let frutas = ["manzana", "banana", "naranja", "uva", "pera"];</code></li>
+            <li>Función (Function): Representa un bloque de código reutilizable. Ejemplo: <code>function saludar() { console.log("Hola"); }</code></li>
+        </ul>
+    </section>
+    <section>
+        <h2>Manipulación de Strings</h2>
+        <p>Las cadenas de texto (strings) en JavaScript son secuencias de caracteres que se utilizan para representar texto. Se pueden manipular de diversas formas utilizando métodos incorporados en el lenguaje. A continuación, se presentan algunos ejemplos comunes de manipulación de strings:</p>
+        <ul>
+            <li><strong>Concatenación:</strong> Combinar dos o más cadenas de texto utilizando el operador <code>+</code> o el método <code>concat()</code>. Ejemplo:
+                <pre><code>let saludo = "Hola, ";
+                let nombre = "María";
+                let mensaje = saludo + nombre; // "Hola, María"
+                // o
+                let mensaje2 = saludo.concat(nombre); // "Hola, María"
+                // o
+                let mensaje3 = `${saludo}${nombre}`; // "Hola, María"</code></pre>
+            </li>
+            <li><strong>Longitud:</strong> Obtener la longitud de una cadena utilizando la propiedad <code>length</code>. Ejemplo:
+                <pre><code>let texto = "JavaScript";
+                let longitud = texto.length; // 10</code></pre>
+            </li>
+            <li><strong>Subcadena:</strong> Extraer una parte de una cadena utilizando los métodos <code>substring()</code>, <code>substr()</code> o <code>slice()</code>. Ejemplo:
+                <pre><code>let frase = "Aprendiendo JavaScript";
+                let subcadena1 = frase.substring(0, 11); // "Aprendiendo"
+                let subcadena2 = frase.substr(12, 10); // "JavaScript"
+                let subcadena3 = frase.slice(0, 11); // "Aprendiendo"</code></pre>
+            </li>
+            <li><strong>Reemplazo:</strong> Reemplazar parte de una cadena utilizando el método <code>replace()</code>. Ejemplo:
+                <pre><code>let mensaje = "Hola Mundo";
+                let nuevoMensaje = mensaje.replace("Mundo", "JavaScript"); // "Hola JavaScript"</code></pre>
+            </li>
+            <li><strong>Conversión a mayúsculas/minúsculas:</strong> Convertir una cadena a mayúsculas o minúsculas utilizando los métodos <code>toUpperCase()</code> y <code>toLowerCase()</code>. Ejemplo:
+                <pre><code>let texto = "JavaScript";
+                let mayusculas = texto.toUpperCase(); // "JAVASCRIPT"
+                let minusculas = texto.toLowerCase(); // "javascript"</code></pre>
+            </li>
+            <li><strong>División:</strong> Dividir una cadena en un arreglo de subcadenas utilizando el método <code>split()</code>. Ejemplo:
+                <pre><code>let frase = "Aprendiendo JavaScript es divertido";
+                let palabras = frase.split(" "); // ["Aprendiendo", "JavaScript", "es", "divertido"]</code></pre>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h2>Números y operaciones</h2>
+        <p>En JavaScript, los números se representan utilizando el tipo de dato <code>Number</code>, que puede manejar tanto números enteros como decimales.</p>
+        <h3>Tipos de números</h3>
+        <ul>
+            <li><strong>Números enteros (Integer):</strong> Son números sin parte decimal, como 1, -5, 1000.</li>
+            <li><strong>Números de punto flotante (Floating-point):</strong> Son números con parte decimal, como 3.14, -0.5, 2.718.</li>
+            <li><strong>Números especiales:</strong> JavaScript también tiene valores especiales para representar conceptos matemáticos como <code>Infinity</code>, <code>-Infinity</code> y <code>NaN</code> (Not a Number).</li>
+            <li>Números con notación científica (Exponential notation): Son números representados en la forma de un número base multiplicado por una potencia de 10. Ejemplo: <code>1.23e4</code> representa 1.23 × 10^4 (12300).</li>
+        </ul>
+        <h3>Operaciones</h3>
+        <h4>Operaciones aritméticas</h4>
+        <ul>
+            <li><strong>Suma (+):</strong> Suma dos números. Ejemplo: <code>5 + 3 // 8</code></li>
+            <li><strong>Resta (-):</strong> Resta un número de otro. Ejemplo: <code>10 - 4 // 6</code></li>
+            <li><strong>Multiplicación (*):</strong> Multiplica dos números. Ejemplo: <code>6 * 7 // 42</code></li>
+            <li><strong>División (/):</strong> Divide un número por otro. Ejemplo: <code>20 / 5 // 4</code></li>
+            <li><strong>Módulo (%):</strong> Devuelve el resto de la división entre dos números. Ejemplo: <code>10 % 3 // 1</code></li>
+            <li><strong>Exponenciación (**):</strong> Eleva un número a la potencia de otro. Ejemplo: <code>2 ** 3 // 8</code></li>
+        </ul>
+        <h4>Operaciones de precisión</h4>
+        <ul>
+            <li><strong>Redondeo:</strong> Utiliza métodos como <code>Math.round()</code>, <code>Math.floor()</code> y <code>Math.ceil()</code> para redondear números. Ejemplo:
+                <pre><code>Math.round(4.5); // 5
+Math.floor(4.9); // 4
+Math.ceil(4.1); // 5</code></pre>
+            </li>
+            <li><strong>Formato decimal:</strong> Utiliza el método <code>toFixed()</code> para formatear un número con un número específico de decimales. Ejemplo:
+                <pre><code>let num = 3.14159;
+let formattedNum = num.toFixed(2); // "3.14"</code></pre>
+            </li>
+        </ul>
+        <h4>Operaciones avanzadas</h4>
+        <ul>
+            <li><strong>Generación de números aleatorios:</strong> Utiliza <code>Math.random()</code> para generar un número aleatorio entre 0 y 1. Ejemplo:
+                <pre><code>let randomNum = Math.random(); // Número aleatorio entre 0 y 1</code></pre>
+            </li>
+            <li><strong>Funciones matemáticas:</strong> JavaScript proporciona varias funciones matemáticas a través del objeto <code>Math</code>, como <code>Math.sqrt()</code> (raíz cuadrada), <code>Math.pow()</code> (potencia), <code>Math.max()</code> (máximo) y <code>Math.min()</code> (mínimo). Ejemplo:
+                <pre><code>let raiz = Math.sqrt(16); // 4
+let potencia = Math.pow(2, 3); // 8
+let maximo = Math.max(5, 10, 3); // 10
+let minimo = Math.min(5, 10, 3); // 3</code></pre>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h2>Type casting</h2>
+        <p>El type casting en JavaScript se refiere al proceso de convertir un valor de un tipo de dato a otro. JavaScript es un lenguaje de tipado dinámico, lo que significa que las variables pueden cambiar de tipo en tiempo de ejecución. Existen dos tipos principales de type casting: implícito y explícito.</p>
+
+        <h3>Tipos de lenguaje para convertir</h3>
+        <h4>Compilados</h4>
+        <p>Traducción y conversión de tipos en lenguajes compilados suelen ser explícitas y controladas por el programador. Son traducidos a código máquina antes de la ejecución.</p>
+        <p>Chequeo estático de tipos: Los lenguajes compilados suelen realizar un chequeo de tipos en tiempo de compilación para detectar errores de tipo antes de ejecutar el programa.</p>
+        <ul>
+            <li>C, C++, Rust, Go, Java, C#, Swift: Utilizan conversiones explícitas mediante funciones o métodos específicos para convertir entre tipos de datos.</li>
+            <li>Ejemplo en C++:
+                <pre><code>int numero = 10;
+double decimal = static_cast&lt;double&gt;(numero); // Conversión explícita de int a double</code></pre>
+            </li>
+        </ul>
+        <h4>Interpretados</h4>
+        <p>Traducción y conversión de tipos en lenguajes interpretados suelen ser más flexibles y dinámicas. La conversión de tipos puede ocurrir en tiempo de ejecución y a menudo es implícita.</p>
+        <p>Chequeo dinámico de tipos: Los lenguajes interpretados suelen realizar un chequeo de tipos en tiempo de ejecución, lo que permite mayor flexibilidad pero puede introducir errores en tiempo de ejecución si no se manejan adecuadamente.</p>
+        <ul>
+            <li>JavaScript, Python, Ruby, PHP: Permiten tanto conversiones implícitas como explícitas entre tipos de datos.</li>
+            <li>Ejemplo en JavaScript:
+                <pre><code>let numero = 10;
+let decimal = Number(numero); // Conversión explícita de int a float</code></pre>
+            </li>
+        </ul>
+        <h3>Type casting implícito</h3>
+        <p>El type casting implícito ocurre cuando JavaScript convierte automáticamente un valor de un tipo a otro sin que el programador lo indique explícitamente. Esto suele suceder en operaciones que involucran diferentes tipos de datos. Algunos ejemplos comunes de type casting implícito son:</p>
+        <ul>
+            <li><strong>Cadenas:</strong> Cuando hay una concatenación entre una cadena y otro tipo de dato, JavaScript convierte automáticamente el otro tipo a cadena. Ejemplo:
+                <pre><code>let resultado = "El número es: " + 5; // "El número es: 5"</code></pre>
+                <pre><code>let texto = "Hola" + 123; // "Hola123"</code></pre>
+                <pre><code>let saludo = "Hola" + true; // "Holatrue"</code></pre>
+            </li>
+            <li><strong>Números:</strong> Cuando no hay cadenas involucradas, JavaScript convierte automáticamente los valores a números. Ejemplo:
+                <pre><code>let suma = true + 1; // 2 (true se convierte a 1)
+            </li>
+        </ul>
+        <h3>Type casting explícito</h3>
+        <p>El type casting explícito ocurre cuando el programador indica de manera clara y directa que desea convertir un valor de un tipo a otro.</p>
+        <ul>
+            <li><strong>Conversión a número:</strong> Utilizando la función <code>Number()</code>, el operador unario <code>+</code> o <code>parseInt()</code> y <code>parseFloat()</code>. Ejemplo:
+                <pre><code>let numero1 = Number("42"); // 42
+let numero2 = +"3.14"; // 3.14
+let entero = parseInt("100"); // 100
+let decimal = parseFloat("3.14"); // 3.14</code></pre>
+            </li>
+            <li><strong>Conversión a cadena:</strong> Utilizando la función <code>String()</code> o el método <code>toString()</code>. Ejemplo:
+                <pre><code>let texto1 = String(123); // "123"
+let texto2 = (456).toString(); // "456"</code></pre>
+            </li>
+            <li><strong>Conversión a booleano:</strong> Utilizando la función <code>Boolean()</code> o mediante doble negación <code>!!</code>. Ejemplo:
+                <pre><code>let bool1 = Boolean(1); // true
+let bool2 = !!0; // false</code></pre>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h2>Operaciones de comparación</h2>
+        <p>En JavaScript, las operaciones de comparación se utilizan para comparar dos valores y determinar su relación. Estas operaciones devuelven un valor booleano (<code>true</code> o <code>false</code>) según el resultado de la comparación. A continuación, se describen las principales operaciones de comparación en JavaScript:</p>
+        <ul>
+            <li><strong>Igualdad estricta (===):</strong> Compara dos valores y sus tipos. Devuelve <code>true</code> si ambos son iguales en valor y tipo, de lo contrario devuelve <code>false</code>. Ejemplo:
+                <pre><code>5 === 5; // true
+5 === '5'; // false</code></pre>
+            </li>
+            <li><strong>Igualdad débil (==):</strong> Compara dos valores después de realizar conversiones de tipo si es necesario. Devuelve <code>true</code> si los valores son iguales después de la conversión, de lo contrario devuelve <code>false</code>. Ejemplo:
+                <pre><code>5 == '5'; // true
+0 == false; // true</code></pre>
+            </li>
+            <li><strong>Desigualdad estricta (!==):</strong> Compara dos valores y sus tipos. Devuelve <code>true</code> si los valores son diferentes en valor o tipo, de lo contrario devuelve <code>false</code>. Ejemplo:
+                <pre><code>5 !== 10; // true
+5 !== '5'; // true</code></pre>
+            </li>
+            <li><strong>Desigualdad débil (!=):</strong> Compara dos valores después de realizar conversiones de tipo si es necesario. Devuelve <code>true</code> si los valores son diferentes después de la conversión, de lo contrario devuelve <code>false</code>. Ejemplo:
+                <pre><code>5 != '10'; // true
+5 != '5'; // false</code></pre>
+            </li>
+            <li><strong>Mayor que (&gt;):</strong> Devuelve <code>true</code> si el valor de la izquierda es mayor que el valor de la derecha, de lo contrario devuelve <code>false</code>. Ejemplo:
+                <pre><code>10 > 5; // true
+3 > 7; // false</code></pre>
+            </li>
+            <li><strong>Menor que (&lt;):</strong> Devuelve <code>true</code> si el valor de la izquierda es menor que el valor de la derecha, de lo contrario devuelve <code>false</code>. Ejemplo:
+                <pre><code>3 < 7; // true
+10 < 5; // false</code></pre>
+            </li>
+            <li><strong>Mayor o igual que (&gt;=):</strong> Devuelve <code>true</code> si el valor de la izquierda es mayor o igual que el valor de la derecha, de lo contrario devuelve <code>false</code>. Ejemplo:
+                <pre><code>7 >= 7; // true
+10 >= 5; // true</code></pre>
+            </li>
+            <li><strong>Menor o igual que (&lt;=):</strong> Devuelve <code>true</code> si el valor de la izquierda es menor o igual que el valor de la derecha, de lo contrario devuelve <code>false</code>. Ejemplo:
+                <pre><code>5 <= 10; // true
+7 <= 3; // false</code></pre>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h2>Operadores lógicos</h2>
+        <p>En JavaScript, los operadores lógicos se utilizan para combinar o modificar valores booleanos (<code>true</code> o <code>false</code>). Estos operadores permiten realizar operaciones lógicas y tomar decisiones basadas en múltiples condiciones. A continuación, se describen los principales operadores lógicos en JavaScript:</p>
+        <ul>
+            <li><strong>AND lógico (&&):</strong> Devuelve <code>true</code> si ambos operandos son <code>true</code>, de lo contrario devuelve <code>false</code>. Ejemplo:
+                <pre><code>true && true; // true
+true && false; // false
+false && false; // false</code></pre>
+            </li>
+            <li><strong>OR lógico (||):</strong> Devuelve <code>true</code> si al menos uno de los operandos es <code>true</code>, de lo contrario devuelve <code>false</code>. Ejemplo:
+                <pre><code>true || false; // true
+false || false; // false</code></pre>
+            </li>
+            <li><strong>NOT lógico (!):</strong> Invierte el valor booleano del operando. Devuelve <code>true</code> si el operando es <code>false</code>, y devuelve <code>false</code> si el operando es <code>true</code>. Ejemplo:
+                <pre><code>!true; // false
+!false; // true</code></pre>
+            </li>        </ul>
+    </section>
+
+    <script src="fundamentos.js">
+    </script>
+</body>
+</html>

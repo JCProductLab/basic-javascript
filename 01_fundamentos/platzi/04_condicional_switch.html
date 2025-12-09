@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicional switch</title>
+</head>
+<body>
+    <h1>Condicional switch</h1>
+    <p>El condicional <code>switch</code> es una estructura de control que permite ejecutar diferentes bloques de código basándose en el valor de una expresión. Es especialmente útil cuando se tienen múltiples condiciones que evaluar.</p>
+
+    <h2>Sintaxis</h2>
+    <pre>
+switch (expresión) {
+    case valor1:
+        // Código a ejecutar si expresión === valor1
+        break;
+    case valor2:
+        // Código a ejecutar si expresión === valor2
+        break;
+    ...
+    default:
+        // Código a ejecutar si ninguna de las condiciones anteriores se cumple
+}
+    </pre>  
+    <h2>Ejemplo</h2>
+    <pre>
+let fruta = 'manzana';
+switch (fruta) {
+    case 'manzana':
+        console.log('Has elegido una manzana.');
+        break;
+    case 'banana':
+        console.log('Has elegido una banana.');
+        break;
+    case 'naranja':
+        console.log('Has elegido una naranja.');
+        break;
+    default:
+        console.log('Fruta no reconocida.');
+}
+    </pre>
+    <p>En este ejemplo, dependiendo del valor de la variable <code>fruta</code>, se ejecutará el bloque de código correspondiente. Si <code>fruta</code> es 'manzana', se imprimirá "Has elegido una manzana." en la consola.</p>
+    
+    <script src="04_condicional_switch.js"></script>
+</body>
+</html>
