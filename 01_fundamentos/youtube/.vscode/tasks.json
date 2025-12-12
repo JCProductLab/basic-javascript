@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Ejecutar JavaScript (WSL)",
+            "type": "shell",
+            // Comando que usa wslpath para traducir la ruta de Windows a Linux.
+            "command": "node \"$(wslpath -u '${file}')\"",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "options": {
+                // Asegura que se use la terminal WSL
+                "shell": {
+                    "executable": "C:\\Windows\\System32\\wsl.exe",
+                    "args": [
+                        "-e",
+                        "bash",
+                        "-c"
+                    ]
+                }
+            }
+        }
+    ]
+}
